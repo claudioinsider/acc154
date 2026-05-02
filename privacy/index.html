@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Política de Privacidade</title>
+    <meta
+      name="description"
+      content="Saiba como a NC EMPREENDIMENTOS LTDA coleta, utiliza e protege seus dados pessoais."
+    />
+    <meta name="robots" content="noindex,follow" />
+    <style>
+      *,
+      :before,
+      :after {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      html {
+        line-height: 1.6;
+        -webkit-text-size-adjust: 100%;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          Segoe UI Symbol,
+          "Noto Color Emoji";
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        margin: 0;
+        background: rgb(229 231 235);
+        color: rgb(71 85 105);
+      }
+      a {
+        color: rgb(45 106 79);
+        text-decoration: underline;
+      }
+      a:hover {
+        color: rgb(27 67 50);
+      }
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      p {
+        margin: 0;
+      }
+      ul,
+      ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      img,
+      svg {
+        display: block;
+      }
+      button {
+        text-transform: none;
+        -webkit-appearance: button;
+        appearance: button;
+        background-color: transparent;
+        background-image: none;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+      }
+      .pp-wrap {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .pp-main {
+        flex: 1;
+        padding: 2.5rem 1rem;
+      }
+      .pp-card {
+        max-width: 48rem;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow:
+          0 10px 15px -3px rgb(0 0 0/0.1),
+          0 4px 6px -4px rgb(0 0 0/0.1);
+        overflow: hidden;
+      }
+      .pp-head {
+        background: rgb(27 67 50);
+        padding: 2rem 2.5rem;
+      }
+      .pp-head h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.25rem;
+      }
+      .pp-head .pp-meta {
+        font-size: 0.8125rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .pp-body {
+        padding: 2rem 2.5rem;
+      }
+      .pp-body section {
+        margin-bottom: 2rem;
+      }
+      .pp-body section:last-child {
+        margin-bottom: 0;
+      }
+      .pp-body h2 {
+        font-size: 0.9375rem;
+        font-weight: 700;
+        color: rgb(30 41 59);
+        margin-bottom: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+        align-items: baseline;
+      }
+      .pp-body h2 .pp-num {
+        color: rgb(45 106 79);
+        font-size: 0.8125rem;
+        font-weight: 700;
+        min-width: 1.25rem;
+      }
+      .pp-body p {
+        margin-bottom: 0.625rem;
+        font-size: 0.875rem;
+        line-height: 1.7;
+      }
+      .pp-body ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 0.625rem;
+      }
+      .pp-body ul li {
+        font-size: 0.875rem;
+        line-height: 1.7;
+        margin-bottom: 0.2rem;
+      }
+      .pp-footer {
+        background: rgb(13 32 24);
+        color: #fff;
+        padding: 3rem 0;
+        border-top: 1px solid rgba(82, 183, 136, 0.15);
+      }
+      .pp-footer-inner {
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      .pp-footer-company {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .pp-footer-company h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: rgb(82 183 136);
+      }
+      .pp-footer-company p {
+        font-size: 0.875rem;
+        color: rgb(209 213 219);
+        margin-bottom: 0.25rem;
+      }
+      .pp-footer-company p:last-child {
+        margin-bottom: 0;
+      }
+      .pp-footer-company strong {
+        font-weight: 600;
+      }
+      .pp-footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        font-size: 0.875rem;
+      }
+      .pp-footer-links a {
+        color: rgb(209 213 219);
+        text-decoration: underline;
+        transition-property: color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+      }
+      .pp-footer-links a:hover {
+        color: rgb(82 183 136);
+      }
+      .pp-footer-links .pp-sep {
+        color: rgb(107 114 128);
+      }
+      .pp-footer-copy {
+        font-size: 0.75rem;
+        color: rgb(156 163 175);
+        text-align: center;
+        max-width: 64rem;
+        margin: 0 auto;
+      }
+      .pp-footer-copy p {
+        margin-bottom: 0.75rem;
+        line-height: 1.6;
+      }
+      .pp-footer-copy p:last-child {
+        margin-bottom: 0;
+      }
+      @media (max-width: 600px) {
+        .pp-head {
+          padding: 1.5rem;
+        }
+        .pp-body {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pp-wrap">
+      <main class="pp-main">
+        <div class="pp-card">
+          <div class="pp-head">
+            <h1>Política de Privacidade</h1>
+            <p class="pp-meta">Última atualização: maio de 2026</p>
+          </div>
+          <div class="pp-body">
+            <section>
+              <h2><span class="pp-num">1.</span>Sobre este Documento</h2>
+              <p>
+                A <strong>NC EMPREENDIMENTOS LTDA</strong> valoriza a privacidade dos seus usuários. Este documento descreve como coletamos, utilizamos e protegemos seus dados pessoais quando você acessa nosso site.
+              </p>
+            </section>
+            <section>
+              <h2><span class="pp-num">2.</span>Controlador dos Dados</h2>
+              <p>
+                <strong>NC EMPREENDIMENTOS LTDA</strong><br>
+                CNPJ: 48.311.681/0001-35<br>
+                R CAPITAO CARLOS LAMARCA (LAS PALMAS), 126 – ALVARENGA – SAO BERNARDO DO CAMPO – SP – CEP: 09.854-070<br>
+                Tel: (11) 4359-3301 | E-mail: <a href="mailto:NATALIACASTELO116@GMAIL.COM">NATALIACASTELO116@GMAIL.COM</a>
+              </p>
+            </section>
+            <section>
+              <h2><span class="pp-num">3.</span>Dados que Coletamos</h2>
+              <p>
+                Dependendo da sua interação com o nosso site, podemos coletar:
+              </p>
+              <ul>
+                <li><strong>Dados de identificação:</strong> nome e informações similares</li>
+                <li><strong>Dados de contato:</strong> endereço de e-mail e número de telefone</li>
+                <li><strong>Dados técnicos:</strong> endereço IP, tipo de navegador, sistema operacional</li>
+                <li><strong>Dados de uso:</strong> como você navega e utiliza o nosso site</li>
+                <li><strong>Mensagem:</strong> conteúdo enviado através do formulário de pedidos ou contato</li>
+              </ul>
+            </section>
+            <section>
+              <h2><span class="pp-num">4.</span>Finalidade do Tratamento</h2>
+              <p>
+                Utilizamos seus dados pessoais exclusivamente para:
+              </p>
+              <ul>
+                <li>Responder às suas solicitações e pedidos de produtos</li>
+                <li>Informar sobre disponibilidade e preços</li>
+                <li>Manter contato comercial</li>
+                <li>Cumprir obrigações legais aplicáveis</li>
+              </ul>
+            </section>
+            <section>
+              <h2><span class="pp-num">5.</span>Compartilhamento de Dados</h2>
+              <p>
+                Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros, exceto quando exigido por lei ou ordem judicial.
+              </p>
+            </section>
+            <section>
+              <h2><span class="pp-num">6.</span>Segurança</h2>
+              <p>
+                Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados contra acesso não autorizado, perda ou divulgação indevida.
+              </p>
+            </section>
+            <section>
+              <h2><span class="pp-num">7.</span>Retenção dos Dados</h2>
+              <p>
+                Seus dados são mantidos apenas pelo tempo necessário para atender às finalidades descritas nesta política ou para cumprir obrigações legais.
+              </p>
+            </section>
+            <section>
+              <h2><span class="pp-num">8.</span>Seus Direitos (LGPD)</h2>
+              <p>
+                Nos termos da Lei 13.709/2018 (LGPD), você tem direito a:
+              </p>
+              <ul>
+                <li>Confirmar a existência de tratamento dos seus dados</li>
+                <li>Acessar os dados que temos sobre você</li>
+                <li>Corrigir dados incompletos, inexatos ou desatualizados</li>
+                <li>Solicitar a exclusão dos seus dados</li>
+                <li>Revogar o consentimento a qualquer momento</li>
+              </ul>
+              <p>
+                Para exercer seus direitos, entre em contato pelo e-mail <a href="mailto:NATALIACASTELO116@GMAIL.COM">NATALIACASTELO116@GMAIL.COM</a>.
+              </p>
+            </section>
+            <section>
+              <h2><span class="pp-num">9.</span>Cookies</h2>
+              <p>
+                Podemos utilizar cookies para melhorar a experiência de navegação. Você pode controlar o uso de cookies pelas configurações do seu navegador.
+              </p>
+            </section>
+            <section>
+              <h2><span class="pp-num">10.</span>Atualizações desta Política</h2>
+              <p>
+                Esta política pode ser atualizada periodicamente. As alterações serão publicadas nesta página com a data de revisão atualizada.
+              </p>
+            </section>
+            <section>
+              <h2><span class="pp-num">11.</span>Foro</h2>
+              <p>
+                Fica eleito o foro de São Bernardo do Campo – SP para dirimir quaisquer controvérsias decorrentes desta política.
+              </p>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer class="pp-footer">
+        <div class="pp-footer-inner">
+          <div class="pp-footer-company">
+            <h3>NC Empreendimentos</h3>
+            <p>R CAPITAO CARLOS LAMARCA (LAS PALMAS), 126 – ALVARENGA – SAO BERNARDO DO CAMPO – SP – CEP: 09.854-070</p>
+            <p>
+              <strong>Tel:</strong> (11) 4359-3301 |
+              <strong>E-mail:</strong> NATALIACASTELO116@GMAIL.COM |
+              <strong>CNPJ:</strong> 48.311.681/0001-35
+            </p>
+          </div>
+          <div class="pp-footer-links">
+            <a href="../index.html">Página Inicial</a>
+            <span class="pp-sep">|</span>
+            <a href="mailto:NATALIACASTELO116@GMAIL.COM">Contato</a>
+          </div>
+          <div class="pp-footer-copy">
+            <p>
+              Copyright &copy; 2026 NC EMPREENDIMENTOS LTDA. Todos os direitos reservados.
+            </p>
+            <p>
+              Este site é informativo. Pedidos e disponibilidade de produtos devem ser confirmados diretamente com a empresa.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NC Empreendimentos Ltda - Comércio varejista de hortifrutigranjeiros e serviços ambulantes de alimentação em São Bernardo do Campo - SP.">
+<meta name="keywords" content="hortifruti, hortifrutigranjeiros, alimentação, feira, verduras, frutas, São Bernardo do Campo, SP">
+<meta name="author" content="NC Empreendimentos Ltda">
+<meta name="geo.region" content="BR-SP">
+<meta name="geo.placename" content="São Bernardo do Campo">
+<title>NC Empreendimentos | Hortifrutigranjeiros – São Bernardo do Campo/SP</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%232d6a4f'/><text y='.9em' font-size='64' font-family='Georgia,serif' font-weight='900' fill='white' x='18'>N</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,800;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --green-deep:#1b4332;
+  --green-mid:#2d6a4f;
+  --green-fresh:#52b788;
+  --green-light:#d8f3dc;
+  --green-pale:#f0faf3;
+  --amber:#e9c46a;
+  --amber-dark:#f4a261;
+  --soil:#5c4033;
+  --white:#fdfff8;
+  --gray:#637074;
+  --dark:#1a2420;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-thumb{background:var(--green-fresh);border-radius:3px;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(253,255,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(45,106,79,0.12);transition:box-shadow .3s;}
+nav.scrolled{box-shadow:0 2px 20px rgba(27,67,50,0.1);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:.9rem 4vw;display:flex;justify-content:space-between;align-items:center;}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;}
+.logo-leaf{width:40px;height:40px;background:var(--green-mid);border-radius:50% 50% 50% 0;display:flex;align-items:center;justify-content:center;font-size:20px;transform:rotate(-45deg);}
+.logo-leaf span{transform:rotate(45deg);display:block;}
+.logo-name{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:800;color:var(--green-deep);line-height:1;}
+.logo-sub{font-size:.62rem;color:var(--green-fresh);letter-spacing:2px;text-transform:uppercase;font-weight:500;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:.88rem;font-weight:500;color:var(--gray);text-decoration:none;transition:color .25s;}
+.nav-links a:hover{color:var(--green-mid);}
+.nav-cta{background:var(--green-mid)!important;color:white!important;padding:.45rem 1.1rem;border-radius:20px;font-weight:600!important;transition:background .25s!important;}
+.nav-cta:hover{background:var(--green-deep)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--dark);transition:all .3s;}
+
+/* HERO */
+#inicio{min-height:100vh;display:flex;align-items:center;padding:100px 4vw 60px;position:relative;overflow:hidden;background:linear-gradient(150deg, var(--green-pale) 0%, #e8f5e9 50%, var(--white) 100%);}
+.hero-circles{position:absolute;top:-60px;right:-60px;width:500px;height:500px;background:radial-gradient(circle,rgba(82,183,136,.15) 0%,transparent 65%);border-radius:50%;pointer-events:none;}
+.hero-circles2{position:absolute;bottom:-80px;left:-40px;width:350px;height:350px;background:radial-gradient(circle,rgba(233,196,106,.12) 0%,transparent 65%);border-radius:50%;pointer-events:none;}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1;width:100%;}
+.hero-text{}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--green-light);color:var(--green-deep);padding:.35rem 1rem;border-radius:20px;font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem;}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;line-height:1.1;color:var(--green-deep);margin-bottom:1.3rem;}
+.hero h1 em{font-style:italic;color:var(--green-fresh);}
+.hero-desc{font-size:1rem;line-height:1.75;color:var(--gray);max-width:460px;margin-bottom:2.5rem;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-main{display:inline-flex;align-items:center;gap:8px;background:var(--green-mid);color:white;padding:.85rem 2rem;border-radius:30px;font-weight:600;font-size:.92rem;text-decoration:none;transition:all .3s;border:none;cursor:pointer;}
+.btn-main:hover{background:var(--green-deep);transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,106,79,.35);}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--green-mid);color:var(--green-mid);padding:.85rem 2rem;border-radius:30px;font-weight:600;font-size:.92rem;text-decoration:none;transition:all .3s;}
+.btn-outline:hover{background:var(--green-light);}
+.hero-visual{display:flex;flex-direction:column;gap:1rem;}
+.hero-card{background:white;border-radius:20px;padding:1.5rem;box-shadow:0 4px 24px rgba(0,0,0,.07);display:flex;align-items:center;gap:1rem;transition:transform .3s;}
+.hero-card:hover{transform:translateX(8px);}
+.hero-card:nth-child(2){margin-left:2rem;}
+.card-icon{font-size:2.2rem;flex-shrink:0;}
+.card-text h4{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;color:var(--green-deep);}
+.card-text p{font-size:.82rem;color:var(--gray);margin-top:.2rem;}
+
+/* SOBRE */
+#sobre{padding:90px 4vw;background:white;}
+.sobre-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.sobre-visual{position:relative;}
+.sobre-box{background:var(--green-pale);border-radius:24px;padding:3rem;border:2px solid var(--green-light);}
+.sobre-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem;}
+.stat-box{background:white;border-radius:14px;padding:1.3rem;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+.stat-box .num{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:800;color:var(--green-mid);}
+.stat-box .lbl{font-size:.75rem;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-top:.3rem;}
+.sobre-badge{position:absolute;bottom:-20px;right:-20px;background:var(--amber);color:var(--soil);border-radius:50%;width:90px;height:90px;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:.75rem;font-weight:800;text-align:center;line-height:1.3;box-shadow:0 4px 16px rgba(244,162,97,.4);}
+.kicker{font-size:.75rem;font-weight:700;color:var(--green-fresh);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem;}
+.kicker::before{content:'';display:block;width:24px;height:2px;background:var(--green-fresh);}
+.sobre-text h2{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:800;color:var(--green-deep);margin-bottom:1.2rem;line-height:1.15;}
+.sobre-text p{font-size:.95rem;line-height:1.8;color:var(--gray);margin-bottom:1rem;}
+.cnpj-chip{display:inline-flex;align-items:center;gap:.6rem;background:var(--green-light);padding:.55rem 1.1rem;border-radius:8px;margin-top:.8rem;}
+.cnpj-chip span{font-size:.75rem;color:var(--green-deep);font-weight:700;letter-spacing:.5px;}
+
+/* PRODUTOS */
+#produtos{padding:90px 4vw;background:var(--green-pale);}
+.sec-header{text-align:center;margin-bottom:3.5rem;}
+.sec-header .kicker{justify-content:center;}
+.sec-header h2{font-family:'Fraunces',serif;font-size:2.3rem;font-weight:800;color:var(--green-deep);}
+.sec-header p{color:var(--gray);font-size:.97rem;max-width:500px;margin:.8rem auto 0;}
+.prod-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.prod-card{background:white;border-radius:20px;padding:2rem 1.6rem;transition:all .3s;border:2px solid transparent;}
+.prod-card:hover{border-color:var(--green-fresh);transform:translateY(-6px);box-shadow:0 16px 40px rgba(45,106,79,.12);}
+.prod-icon{font-size:2.8rem;margin-bottom:1.1rem;display:block;}
+.prod-card h3{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:var(--green-deep);margin-bottom:.5rem;}
+.prod-card p{font-size:.88rem;color:var(--gray);line-height:1.65;}
+
+/* DEPOIMENTOS */
+#depoimentos{padding:90px 4vw;background:white;}
+.dep-grid{max-width:1200px;margin:2.5rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.dep-card{background:var(--green-pale);border-radius:18px;padding:2rem 1.8rem;border:1px solid var(--green-light);transition:transform .3s;}
+.dep-card:hover{transform:translateY(-4px);}
+.dep-stars{color:var(--amber-dark);font-size:.88rem;letter-spacing:2px;margin-bottom:1rem;}
+.dep-text{font-size:.9rem;line-height:1.75;color:var(--gray);font-style:italic;margin-bottom:1.5rem;}
+.dep-author{display:flex;align-items:center;gap:.8rem;}
+.dep-avatar{width:40px;height:40px;background:var(--green-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.1rem;color:white;font-weight:700;}
+.dep-name{font-weight:600;font-size:.88rem;color:var(--green-deep);}
+.dep-role{font-size:.78rem;color:var(--gray);}
+
+/* CONTATO */
+#contato{padding:90px 4vw;background:var(--green-deep);color:white;}
+.contato-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;}
+.contato-info .kicker{color:var(--green-fresh);}
+.contato-info .kicker::before{background:var(--green-fresh);}
+.contato-info h2{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:800;margin-bottom:1rem;color:white;}
+.contato-info p{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.7;margin-bottom:2rem;}
+.info-item{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,.08);}
+.info-item:last-of-type{border-bottom:none;}
+.info-icon{width:38px;height:38px;background:rgba(82,183,136,.2);border:1px solid rgba(82,183,136,.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;}
+.info-item h4{font-size:.72rem;font-weight:700;color:var(--green-fresh);letter-spacing:2px;text-transform:uppercase;margin-bottom:.2rem;}
+.info-item p,.info-item a{font-size:.9rem;color:rgba(255,255,255,.75);text-decoration:none;line-height:1.5;}
+.info-item a:hover{color:var(--green-fresh);}
+.form-box{background:white;border-radius:24px;padding:2.5rem;}
+.form-box h3{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--green-deep);margin-bottom:1.5rem;font-weight:700;}
+.fg{margin-bottom:1rem;}
+.fg label{display:block;font-size:.75rem;font-weight:600;color:var(--gray);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.4rem;}
+.fg input,.fg textarea,.fg select{width:100%;border:1.5px solid #e8ede9;border-radius:10px;padding:.8rem 1rem;font-family:'DM Sans',sans-serif;font-size:.92rem;color:var(--dark);outline:none;transition:border .3s;background:#fdfff8;}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--green-fresh);background:white;}
+.fg select option{background:white;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.btn-form{width:100%;padding:.95rem;background:var(--green-mid);color:white;border:none;border-radius:30px;font-weight:700;font-size:.95rem;cursor:pointer;transition:background .25s;margin-top:.5rem;}
+.btn-form:hover{background:var(--green-deep);}
+.form-ok{display:none;background:#d8f3dc;color:var(--green-deep);border-radius:10px;padding:.9rem;text-align:center;font-size:.88rem;font-weight:600;margin-top:.8rem;}
+
+/* FOOTER */
+footer{background:#0d2018;color:rgba(255,255,255,.5);padding:50px 4vw 30px;border-top:1px solid rgba(82,183,136,.15);}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07);}
+.footer-brand h2{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--green-fresh);margin-bottom:.7rem;}
+.footer-brand p{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.7;max-width:300px;margin-bottom:1rem;}
+.footer-official{background:rgba(82,183,136,.07);border:1px solid rgba(82,183,136,.15);border-radius:10px;padding:1rem 1.2rem;}
+.footer-official-lbl{font-size:.65rem;font-weight:700;color:var(--green-fresh);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:.5rem;}
+.footer-official p{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.7;}
+.footer-official strong{color:rgba(255,255,255,.65);}
+.footer-col h4{font-size:.72rem;font-weight:700;color:var(--green-fresh);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:1.1rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-col ul a{font-size:.86rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .25s;}
+.footer-col ul a:hover{color:var(--green-fresh);}
+.footer-bottom{padding-top:1.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-bottom p{font-size:.77rem;color:rgba(255,255,255,.3);}
+.footer-bottom strong{color:rgba(255,255,255,.5);}
+.footer-links{display:flex;gap:1.5rem;}
+.footer-links a{font-size:.77rem;color:rgba(255,255,255,.3);text-decoration:none;transition:color .25s;}
+.footer-links a:hover{color:var(--green-fresh);}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);overflow-y:auto;padding:4vh 4vw;}
+.modal-overlay.open{display:flex;align-items:flex-start;justify-content:center;}
+.modal-box{background:white;max-width:800px;width:100%;border-radius:20px;padding:3rem;position:relative;margin:auto;}
+.modal-close{position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--gray);}
+.modal-close:hover{color:var(--green-mid);}
+.modal-box h2{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--green-deep);margin-bottom:.4rem;}
+.modal-updated{font-size:.78rem;color:var(--gray);margin-bottom:1.8rem;}
+.modal-box h3{font-size:.82rem;font-weight:700;color:var(--green-mid);letter-spacing:1.5px;text-transform:uppercase;margin:1.8rem 0 .5rem;}
+.modal-box p,.modal-box li{font-size:.88rem;line-height:1.8;color:#555;}
+.modal-box ul{padding-left:1.2rem;margin-top:.4rem;}
+.modal-box ul li{margin-bottom:.25rem;}
+.modal-company{background:var(--green-pale);border-left:3px solid var(--green-mid);padding:.9rem 1.1rem;border-radius:0 8px 8px 0;margin:1rem 0;}
+.modal-company p{font-size:.85rem;}
+hr.mdiv{border:none;border-top:1px solid #e5e5e5;margin:2rem 0;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:white;padding:1.5rem 4vw;border-bottom:1px solid var(--green-light);gap:1rem;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-visual{display:none;}
+  .sobre-inner{grid-template-columns:1fr;}
+  .sobre-visual{display:none;}
+  .prod-grid{grid-template-columns:1fr 1fr;}
+  .dep-grid{grid-template-columns:1fr;}
+  .contato-inner{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+}
+@media(max-width:560px){.prod-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#inicio" class="logo">
+      <div class="logo-leaf"><span>🌿</span></div>
+      <div><div class="logo-name">NC Empreendimentos</div><div class="logo-sub">Hortifrutigranjeiros</div></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section id="inicio">
+  <div class="hero-circles"></div><div class="hero-circles2"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">🌱 São Bernardo do Campo · SP</div>
+      <h1>Frescor direto da <em>terra</em> até você</h1>
+      <p class="hero-desc">Hortifrutigranjeiros selecionados com qualidade e carinho. Frutas, verduras, legumes e muito mais para sua mesa e seu negócio.</p>
+      <div class="hero-btns">
+        <a href="#contato" class="btn-main">🛒 Fazer Pedido</a>
+        <a href="#produtos" class="btn-outline">Ver Produtos →</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card"><div class="card-icon">🍅</div><div class="card-text"><h4>Hortifruti Fresco</h4><p>Selecionados diariamente</p></div></div>
+      <div class="hero-card"><div class="card-icon">🥬</div><div class="card-text"><h4>Verduras e Legumes</h4><p>Direto do produtor</p></div></div>
+      <div class="hero-card"><div class="card-icon">🍎</div><div class="card-text"><h4>Frutas da Estação</h4><p>Variedade e sabor</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="sobre-inner" style="max-width:1200px;margin:0 auto;">
+    <div class="sobre-visual reveal">
+      <div class="sobre-box">
+        <div class="kicker">Nossa história</div>
+        <p style="font-size:.9rem;color:var(--gray);line-height:1.7;">Comprometidos com qualidade, frescor e o abastecimento da comunidade em São Bernardo do Campo.</p>
+        <div class="sobre-stat-grid">
+          <div class="stat-box"><div class="num">🌿</div><div class="lbl">Produtos Frescos</div></div>
+          <div class="stat-box"><div class="num">✅</div><div class="lbl">Situação Ativa</div></div>
+          <div class="stat-box"><div class="num">🏘️</div><div class="lbl">Atend. Local</div></div>
+          <div class="stat-box"><div class="num">🤝</div><div class="lbl">Confiança</div></div>
+        </div>
+      </div>
+      <div class="sobre-badge">Desde<br>2022</div>
+    </div>
+    <div class="sobre-text reveal">
+      <div class="kicker">Sobre nós</div>
+      <h2>Qualidade que você vê e sente</h2>
+      <p>A <strong>NC Empreendimentos Ltda</strong> atua no comércio varejista de hortifrutigranjeiros e serviços ambulantes de alimentação em São Bernardo do Campo, SP.</p>
+      <p>Nossa missão é oferecer produtos frescos e de qualidade, selecionados com cuidado para atender famílias e estabelecimentos comerciais da região com confiança e transparência.</p>
+      <div class="cnpj-chip"><span>CNPJ: 48.311.681/0001-35 · Situação: ATIVA</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="produtos">
+  <div class="sec-header reveal">
+    <div class="kicker" style="justify-content:center;">O que oferecemos</div>
+    <h2>Nossos Produtos</h2>
+    <p>Variedade, frescor e qualidade em cada item que chegamos até você.</p>
+  </div>
+  <div class="prod-grid">
+    <div class="prod-card reveal"><span class="prod-icon">🍅</span><h3>Tomates e Hortaliças</h3><p>Tomates, pimentões, abobrinhas e muito mais, sempre frescos e selecionados.</p></div>
+    <div class="prod-card reveal"><span class="prod-icon">🥬</span><h3>Verduras e Folhosas</h3><p>Alface, rúcula, espinafre, couve e todas as folhosas que sua cozinha precisa.</p></div>
+    <div class="prod-card reveal"><span class="prod-icon">🍎</span><h3>Frutas da Estação</h3><p>Maçãs, laranjas, mangas, bananas e as melhores frutas de cada temporada.</p></div>
+    <div class="prod-card reveal"><span class="prod-icon">🥕</span><h3>Raízes e Tubérculos</h3><p>Cenoura, beterraba, batata, mandioca e outros legumes de raiz com qualidade.</p></div>
+    <div class="prod-card reveal"><span class="prod-icon">🌽</span><h3>Grãos e Cereais</h3><p>Milho, feijão, lentilha e grãos selecionados para complementar sua alimentação.</p></div>
+    <div class="prod-card reveal"><span class="prod-icon">🍱</span><h3>Serviços Ambulantes</h3><p>Alimentação preparada na hora com ingredientes frescos para atender sua demanda.</p></div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="sec-header reveal" style="max-width:1200px;margin:0 auto 0;">
+    <div class="kicker" style="justify-content:center;">Clientes</div>
+    <h2>O que dizem sobre nós</h2>
+  </div>
+  <div class="dep-grid">
+    <div class="dep-card reveal">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Sempre compro meus hortifrutis aqui. Produtos fresquíssimos e atendimento muito atencioso. Já recomendei para toda a família!"</p>
+      <div class="dep-author"><div class="dep-avatar">M</div><div><div class="dep-name">Marina A.</div><div class="dep-role">Cliente frequente – SBC</div></div></div>
+    </div>
+    <div class="dep-card reveal">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Abasteço meu restaurante aqui há meses. Qualidade constante, preço justo e entrega pontual. Parceria de confiança!"</p>
+      <div class="dep-author"><div class="dep-avatar">R</div><div><div class="dep-name">Roberto C.</div><div class="dep-role">Proprietário de restaurante</div></div></div>
+    </div>
+    <div class="dep-card reveal">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"As frutas são sempre frescas e selecionadas com cuidado. Atendimento excelente e preços acessíveis. Recomendo demais!"</p>
+      <div class="dep-author"><div class="dep-avatar">F</div><div><div class="dep-name">Fernanda L.</div><div class="dep-role">Moradora do Alvarenga</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="contato-inner">
+    <div class="contato-info reveal">
+      <div class="kicker">Fale conosco</div>
+      <h2>Entre em Contato</h2>
+      <p>Quer fazer um pedido ou tirar dúvidas? Entre em contato conosco!</p>
+      <div class="info-item"><div class="info-icon">📍</div><div><h4>Endereço</h4><p>R CAPITAO CARLOS LAMARCA (LAS PALMAS), 126<br>ALVARENGA – SAO BERNARDO DO CAMPO – SP<br>CEP: 09.854-070</p></div></div>
+      <div class="info-item"><div class="info-icon">📞</div><div><h4>Telefone</h4><a href="tel:+551143593301">(11) 4359-3301</a></div></div>
+      <div class="info-item"><div class="info-icon">✉️</div><div><h4>E-mail</h4><a href="mailto:NATALIACASTELO116@GMAIL.COM">NATALIACASTELO116@GMAIL.COM</a></div></div>
+      <div class="info-item"><div class="info-icon">🕐</div><div><h4>Horário</h4><p>Segunda a Sábado: 07h – 18h<br>Domingo: 07h – 13h</p></div></div>
+    </div>
+    <div class="form-box reveal">
+      <h3>Envie uma mensagem</h3>
+      <form id="cForm" onsubmit="sendForm(event)">
+        <div class="form-row">
+          <div class="fg"><label>Nome</label><input type="text" placeholder="Seu nome" required></div>
+          <div class="fg"><label>Telefone</label><input type="tel" placeholder="(11) 9 0000-0000" required></div>
+        </div>
+        <div class="fg"><label>E-mail</label><input type="email" placeholder="seu@email.com"></div>
+        <div class="fg"><label>Tipo de interesse</label>
+          <select><option value="">Selecione...</option><option>Pedido de Produtos</option><option>Consulta de Preços</option><option>Parceria Comercial</option><option>Outro</option></select>
+        </div>
+        <div class="fg"><label>Mensagem</label><textarea rows="4" placeholder="Como podemos te ajudar?" required></textarea></div>
+        <button type="submit" class="btn-form">🌿 Enviar Mensagem</button>
+        <div class="form-ok" id="formOk">✓ Mensagem enviada! Em breve entraremos em contato.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2>NC Empreendimentos</h2>
+        <p>Hortifrutigranjeiros frescos e serviços de alimentação em São Bernardo do Campo e região.</p>
+        <div class="footer-official">
+          <div class="footer-official-lbl">Dados Oficiais</div>
+          <p><strong>NC EMPREENDIMENTOS LTDA</strong><br>
+          CNPJ: <strong>48.311.681/0001-35</strong><br>
+          R CAPITAO CARLOS LAMARCA (LAS PALMAS), 126<br>
+          ALVARENGA – SAO BERNARDO DO CAMPO – SP<br>
+          CEP: 09.854-070<br>
+          Tel: (11) 4359-3301<br>
+          E-mail: NATALIACASTELO116@GMAIL.COM</p>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="#produtos">Hortifruti Fresco</a></li>
+          <li><a href="#produtos">Verduras e Legumes</a></li>
+          <li><a href="#produtos">Frutas da Estação</a></li>
+          <li><a href="#produtos">Serviços Ambulantes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#" onclick="openModal('priv')">Política de Privacidade</a></li>
+          <li><a href="#" onclick="openModal('terms')">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        <p>© 2026 <strong>NC EMPREENDIMENTOS LTDA</strong> - Todos os direitos reservados.</p>
+        <p>CNPJ: <strong>48.311.681/0001-35</strong> · R CAPITAO CARLOS LAMARCA (LAS PALMAS), 126, ALVARENGA, SAO BERNARDO DO CAMPO – SP, CEP: 09.854-070 · Tel: (11) 4359-3301</p>
+      </div>
+      <div class="footer-links">
+        <a href="#" onclick="openModal('priv')">Privacidade</a>
+        <a href="#" onclick="openModal('terms')">Termos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL PRIVACIDADE -->
+<div class="modal-overlay" id="modal-priv">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('priv')">✕</button>
+    <h2>Política de Privacidade</h2>
+    <p class="modal-updated">Última atualização: abril de 2026</p>
+    <div class="modal-company"><p><strong>NC EMPREENDIMENTOS LTDA</strong> | CNPJ: 48.311.681/0001-35<br>R CAPITAO CARLOS LAMARCA (LAS PALMAS), 126 – ALVARENGA – SAO BERNARDO DO CAMPO – SP – CEP: 09.854-070<br>Tel: (11) 4359-3301 | E-mail: NATALIACASTELO116@GMAIL.COM</p></div>
+    <h3>1. Controlador dos dados</h3><p>A NC Empreendimentos Ltda, CNPJ 48.311.681/0001-35, é responsável pelo tratamento dos dados pessoais coletados neste site.</p>
+    <h3>2. Dados coletados</h3><p>Coletamos nome, telefone, e-mail e mensagem quando você preenche o formulário de contato.</p>
+    <h3>3. Finalidade</h3><p>Os dados são usados exclusivamente para responder sua solicitação e manter contato comercial.</p>
+    <h3>4. Compartilhamento</h3><p>Não vendemos ou compartilhamos seus dados com terceiros, exceto quando exigido por lei.</p>
+    <h3>5. Seus direitos (LGPD)</h3><p>Você pode solicitar acesso, correção ou exclusão dos seus dados pelo e-mail NATALIACASTELO116@GMAIL.COM.</p>
+    <hr class="mdiv"><p style="font-size:.78rem;color:#aaa;">© 2026 NC EMPREENDIMENTOS LTDA – CNPJ 48.311.681/0001-35</p>
+  </div>
+</div>
+<!-- MODAL TERMOS -->
+<div class="modal-overlay" id="modal-terms">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('terms')">✕</button>
+    <h2>Termos de Uso</h2>
+    <p class="modal-updated">Última atualização: abril de 2026</p>
+    <div class="modal-company"><p><strong>NC EMPREENDIMENTOS LTDA</strong> | CNPJ: 48.311.681/0001-35<br>R CAPITAO CARLOS LAMARCA (LAS PALMAS), 126 – ALVARENGA – SAO BERNARDO DO CAMPO – SP – CEP: 09.854-070</p></div>
+    <h3>1. Aceitação</h3><p>Ao acessar este site, você concorda com estes termos.</p>
+    <h3>2. Sobre a empresa</h3><p>Site da NC Empreendimentos Ltda, CNPJ 48.311.681/0001-35, situação ATIVA, atuante em hortifrutigranjeiros e alimentação ambulante.</p>
+    <h3>3. Uso do site</h3><p>O site é informativo. Pedidos são confirmados via contato direto. É vedado uso para fins ilícitos.</p>
+    <h3>4. Responsabilidade</h3><p>Informações de preços e disponibilidade estão sujeitas a alteração. Consulte-nos diretamente para confirmar.</p>
+    <h3>5. Foro</h3><p>Fica eleito o foro de São Bernardo do Campo – SP.</p>
+    <hr class="mdiv"><p style="font-size:.78rem;color:#aaa;">© 2026 NC EMPREENDIMENTOS LTDA – CNPJ 48.311.681/0001-35</p>
+  </div>
+</div>
+
+<script>
+const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40));
+const obs=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*70);obs.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function sendForm(e){e.preventDefault();const b=e.target.querySelector('.btn-form');b.textContent='Enviando...';b.disabled=true;setTimeout(()=>{document.getElementById('formOk').style.display='block';b.textContent='🌿 Enviar Mensagem';b.disabled=false;e.target.reset();setTimeout(()=>document.getElementById('formOk').style.display='none',5000);},1000);}
+function openModal(id){event.preventDefault();document.getElementById('modal-'+id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById('modal-'+id).classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.modal-overlay').forEach(m=>m.addEventListener('click',e=>{if(e.target===m){m.classList.remove('open');document.body.style.overflow='';}}) );
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(m=>{m.classList.remove('open');document.body.style.overflow='';});});
+</script>
+</body>
+</html>
