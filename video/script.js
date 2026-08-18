@@ -64,8 +64,7 @@ function onReady(fn) {
 
 /* ---------- 3. Gate: libera a oferta após o pitch do vídeo ---------- */
 onReady(function () {
-  var SECONDS_TO_REVEAL_OFFER = 5 // segundos de vídeo até liberar a oferta
-  // var SECONDS_TO_REVEAL_OFFER = 2725
+  var SECONDS_TO_REVEAL_OFFER = 2725
   var alreadyShownKey = "offerAlreadyDisplayed"
   var revealed = false // trava: "timeupdate" dispara várias vezes por segundo
 
